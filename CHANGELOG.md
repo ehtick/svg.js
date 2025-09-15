@@ -6,6 +6,12 @@ The document follows the conventions described in [“Keep a CHANGELOG”](http:
 
 ====
 
+## [3.2.5]
+
+### Fixed
+
+- fixed import of svg strings with leading comment (#1339)
+
 ## [3.2.4]
 
 ### Fixed
@@ -1051,6 +1057,7 @@ The document follows the conventions described in [“Keep a CHANGELOG”](http:
 
 <!-- Headings above link to the releases listed here -->
 
+[3.2.5]: https://github.com/svgdotjs/svg.js/releases/tag/3.2.5
 [3.2.4]: https://github.com/svgdotjs/svg.js/releases/tag/3.2.4
 [3.2.3]: https://github.com/svgdotjs/svg.js/releases/tag/3.2.3
 [3.2.2]: https://github.com/svgdotjs/svg.js/releases/tag/3.2.2

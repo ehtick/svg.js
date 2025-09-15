@@ -7,13 +7,13 @@ declare class BuiltInArray<T> extends Array<T> {}
 // camelCase to kebab-case
 declare type CamelToKebab<S extends string> = S extends `${infer T}${infer U}`
   ? U extends Uncapitalize<U>
-  ? `${Lowercase<T>}${CamelToKebab<U>}`
-  : `${Lowercase<T>}-${CamelToKebab<U>}`
-  : S;
+    ? `${Lowercase<T>}${CamelToKebab<U>}`
+    : `${Lowercase<T>}-${CamelToKebab<U>}`
+  : S
 
 declare type ConvertKeysToKebab<T> = {
-  [K in keyof T as CamelToKebab<K & string>]: T[K];
-};
+  [K in keyof T as CamelToKebab<K & string>]: T[K]
+}
 
 declare type KebabCSSStyleDeclaration = ConvertKeysToKebab<CSSStyleDeclaration>
 
