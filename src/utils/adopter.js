@@ -34,10 +34,10 @@ export function makeInstance(element, isHTML = false) {
 
   // We can use firstChild here because we know,
   // that the first char is < and thus an element
-  element = adopter(wrapper.firstChild)
+  element = adopter(wrapper.firstElementChild)
 
   // make sure, that element doesn't have its wrapper attached
-  wrapper.removeChild(wrapper.firstChild)
+  wrapper.removeChild(wrapper.firstElementChild)
   return element
 }
 

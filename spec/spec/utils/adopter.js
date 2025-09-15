@@ -77,6 +77,16 @@ describe('adopter.js', () => {
       expect(rect.parent()).toBe(null)
     })
 
+    it('ignores leading comments', () => {
+      const rect = makeInstance('<!-- Comment --><rect width="200px" />')
+      expect(adoptSpy).toHaveBeenCalledWith(any(Node))
+      expect(adoptSpy).toHaveBeenCalledWith(
+        objectContaining({ nodeName: 'rect' })
+      )
+      expect(rect).toEqual(any(Rect))
+      expect(rect.parent()).toBe(null)
+    })
+
     it('creates an element in the html namespace from passed html string', () => {
       const div = makeInstance('<div />', true)
 
